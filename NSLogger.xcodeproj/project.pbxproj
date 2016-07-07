@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B5029E8D1D2E9BDD00B51E4E /* Combined */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B5029E8E1D2E9BDD00B51E4E /* Build configuration list for PBXAggregateTarget "Combined" */;
+			buildPhases = (
+				B5029E911D2E9BE300B51E4E /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Combined;
+			productName = Combined;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		C29EC74D1CCE5FF000258184 /* NSLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = DAAD0FAC1C4BE55F0042313D /* NSLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C29EC74E1CCE5FF100258184 /* NSLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = DAAD0FAC1C4BE55F0042313D /* NSLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B5029E8C1D2E9B7C00B51E4E /* BuildCombined.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = BuildCombined.sh; sourceTree = SOURCE_ROOT; };
 		C29EC7381CCE5D9700258184 /* NSLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29EC7451CCE5DA400258184 /* NSLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAD0F961C4BE27B0042313D /* NSLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +71,7 @@
 		DAAD0F8C1C4BE27B0042313D = {
 			isa = PBXGroup;
 			children = (
+				B5029E8C1D2E9B7C00B51E4E /* BuildCombined.sh */,
 				DAAD0F981C4BE27B0042313D /* NSLogger */,
 				DAAD0F971C4BE27B0042313D /* Products */,
 			);
@@ -178,6 +194,12 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Florent Pillet";
 				TargetAttributes = {
+					B5029E8D1D2E9BDD00B51E4E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YY6CWUX533;
+						DevelopmentTeamName = "Stand Alone, Inc.";
+						ProvisioningStyle = Automatic;
+					};
 					C29EC7371CCE5D9700258184 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -186,6 +208,8 @@
 					};
 					DAAD0F951C4BE27B0042313D = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YY6CWUX533;
+						DevelopmentTeamName = "Stand Alone, Inc.";
 					};
 				};
 			};
@@ -204,6 +228,7 @@
 				DAAD0F951C4BE27B0042313D /* NSLogger iOS */,
 				C29EC7371CCE5D9700258184 /* NSLogger OS X */,
 				C29EC7441CCE5DA400258184 /* NSLogger tvOS */,
+				B5029E8D1D2E9BDD00B51E4E /* Combined */,
 			);
 		};
 /* End PBXProject section */
@@ -231,6 +256,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5029E911D2E9BE300B51E4E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./BuildCombined.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C29EC7331CCE5D9700258184 /* Sources */ = {
@@ -260,6 +301,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		B5029E8F1D2E9BDD00B51E4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B5029E901D2E9BDD00B51E4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C29EC73E1CCE5D9700258184 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -394,6 +449,7 @@
 		DAAD0F9F1C4BE27B0042313D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -402,6 +458,7 @@
 		DAAD0FA01C4BE27B0042313D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -410,6 +467,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B5029E8E1D2E9BDD00B51E4E /* Build configuration list for PBXAggregateTarget "Combined" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5029E8F1D2E9BDD00B51E4E /* Debug */,
+				B5029E901D2E9BDD00B51E4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C29EC73D1CCE5D9700258184 /* Build configuration list for PBXNativeTarget "NSLogger OS X" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
